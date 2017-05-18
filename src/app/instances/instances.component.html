@@ -2,7 +2,17 @@
   instances works!
 </p>
 <ul class="instances">
-  <li *ngFor="let instance of instances">
+  <li *ngFor="let instance of instances"
+    [class.selected]="instance === selectedInstance"
+    (click)="onSelect(instance)">
     <span class="badge">{{instance.id}}</span> {{instance.name}}
   </li>
 </ul>
+<div *ngIf="selectedInstance">
+  <h2>{{selectedInstance.name}} details!</h2>
+  <div><label>id: </label>{{selectedInstance.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="selectedInstance.name" placeholder="name"/>
+  </div>
+</div>
