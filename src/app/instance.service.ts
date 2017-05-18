@@ -8,7 +8,7 @@ import { Instance } from './instance';
 @Injectable()
 export class InstanceService {
 
-    private instancesUrl = 'api/heroes';  // URL to web api
+    private instancesUrl = 'api/instances';  // URL to web api
     private headers = new Headers(
         {
             'Content-Type': 'application/json'
