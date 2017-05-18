@@ -11,7 +11,7 @@ import { InstanceComponent } from './instance/instance.component';
 import { InstancesComponent } from './instances/instances.component';
 
 import { InstanceService } from './instance.service';
-import { InstanceSearchService } from './instance-search.service';
+//import { InstanceSearchService } from './instance-search.service';
 
 // In-Memory Web API
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -23,7 +23,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     NavigationComponent,
     InstanceComponent,
     InstancesComponent,
-    InstanceSearchService,
+    //InstanceSearchService,
   ],
   imports: [
     BrowserModule,

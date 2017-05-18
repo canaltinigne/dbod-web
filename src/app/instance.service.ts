@@ -33,7 +33,7 @@ export class InstanceService {
             .then(response => response.json().data as Instance)
             .catch(this.handleError);
     }
-    update(instance:Instance): Promise<instance> {
+    update(instance:Instance): Promise<Instance> {
         const url = `${this.instancesUrl}/${instance.id}`;
         return this.http
             .put(url, JSON.stringify(instance), {headers: this.headers})
