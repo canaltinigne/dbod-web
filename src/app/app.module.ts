@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RouterModule  } from '@angular/router';  // temporal
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -30,6 +31,21 @@ import { InMemoryDataService } from './in-memory-data.service';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+    RouterModule.forRoot([  // temporal
+      {
+        path: '',
+        redirectTo: '/navigation',
+        pathMatch: 'full'
+      },
+      {
+        path: 'navigation',
+        component: NavigationComponent
+      },
+      {
+        path: 'instances',
+        component: InstancesComponent
+      },
+    ])
   ],
   providers: [InstanceService],
   bootstrap: [AppComponent]
