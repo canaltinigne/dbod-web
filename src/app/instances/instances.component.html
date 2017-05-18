@@ -1,6 +1,8 @@
 <p>
   instances works!
 </p>
-<li *ngFor="let instance of instances">
-  <span class="badge">{{instance.id}}</span> {{instance.name}}
-</li>
+<ul class="instances">
+  <li *ngFor="let instance of instances">
+    <span class="badge">{{instance.id}}</span> {{instance.name}}
+  </li>
+</ul>
