@@ -28,6 +28,7 @@ export class InstancesComponent implements OnInit {
   onSelect(instance: Instance): void {
     this.selectedInstance = instance;
   }
+  
   gotoDetail(): void {
     this.router.navigate(['/instance', this.selectedInstance.id]);
   }

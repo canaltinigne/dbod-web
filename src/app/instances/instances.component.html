@@ -1,13 +1,26 @@
 <p>
   instances works!
 </p>
-<ul class="instances">
-  <li *ngFor="let instance of instances"
-    [class.selected]="instance === selectedInstance"
-    (click)="onSelect(instance)">
-    <span class="badge">{{instance.id}}</span> {{instance.name}}
-  </li>
-</ul>
+<table class="instances">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Class</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let instance of instances" 
+  [class.selected]="instance === selectedInstance"
+  (click)="onSelect(instance)">
+  <td>{{instance.id}}</td>
+  <td>{{instance.name}}</td>
+  <td>{{instance.type}}</td>
+  <td>{{instance.class}}</td>
+  </tr>
+</tbody>
+</table>
 <div *ngIf="selectedInstance">
   <h2>{{selectedInstance.name}} details!</h2>
   <div><label>id: </label>{{selectedInstance.id}}</div>
